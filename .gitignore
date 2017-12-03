@@ -1,6 +1,6 @@
 # Secrets
 config
-
+*.html
 
 
 # Byte-compiled / optimized / DLL files

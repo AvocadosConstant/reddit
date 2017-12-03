@@ -1,0 +1,51 @@
+body {
+  background: #212121;
+  color: #BCBFC1;
+  font-family: 'Roboto Slab', serif;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+table {
+  width 100%;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+}
+
+td {
+  vertical-align: middle;
+  padding: 8px;
+}
+
+.post-content {
+  vertical-align: top;
+}
+
+.post {
+  height: 100px;
+}
+
+.post-thumb {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.score {
+  font-size: 18px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #80DEEA;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 20px;
+  color: #ECEFF1;
+}
