@@ -69,12 +69,15 @@ def main():
     reddit = create_reddit('./config')
     comments, links = [], []
 
+    print('\nFetching saved links. This might take a few moments...')
     for post in reddit.user.me().saved(limit=None):
         if is_link(post) and not post.over_18:
             links.append(post)
-        subreddits[post.subreddit] += 1
 
+    print('Building html file...')
     output_html('output/index.html', build_html(links))
+
+    print('Complete! Open output/index.html in your browser.')
 
 
 if __name__ == "__main__":
