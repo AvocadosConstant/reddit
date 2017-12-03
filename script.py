@@ -7,6 +7,7 @@ import praw
 def is_link(post):
     return type(post) is praw.models.Submission
 
+
 def create_reddit(config_file):
     config = ConfigParser()
     config.read(config_file)
@@ -17,6 +18,7 @@ def create_reddit(config_file):
         user_agent =    config['client']['user_agent'],
         username =      config['user']['name'],
         password =      config['user']['pw'])
+
 
 def build_posts_html(posts):
     doc, tag, text, line = Doc().ttl()
@@ -43,6 +45,7 @@ def build_posts_html(posts):
                         target='_blank')
     return doc.getvalue()
 
+
 def build_html(posts):
     doc, tag, text, line = Doc().ttl()
     with tag('html'):
@@ -56,9 +59,11 @@ def build_html(posts):
                 doc.asis(build_posts_html(posts))
     return doc.getvalue()
 
+
 def output_html(file_name, html):
     with open(file_name, 'w') as f:
         f.write(html)
+
 
 def main():
     reddit = create_reddit('./config')
@@ -70,6 +75,7 @@ def main():
         subreddits[post.subreddit] += 1
 
     output_html('output/index.html', build_html(links))
+
 
 if __name__ == "__main__":
     main()
