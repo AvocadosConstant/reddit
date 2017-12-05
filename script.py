@@ -34,12 +34,12 @@ def build_posts_html(posts):
                 with tag('td', klass='post-content'):
                     with tag('a', href=post.url, target='_blank'):
                         line('h2', post.title)
-                    line('a', 'Comments',
+                    line('a', str(post.num_comments) + ' comments ',
                         href='https://reddit.com'+post.permalink,
                         target='_blank')
                     text(date.utcfromtimestamp(
                         int(post.created_utc)).strftime(
-                            '\tSubmitted on %b %d, %Y to '))
+                            'Submitted on %b %d, %Y to '))
                     line('a', str(post.subreddit),
                         href='https://reddit.com/r/'+str(post.subreddit),
                         target='_blank')
