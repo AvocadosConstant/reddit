@@ -9,7 +9,12 @@ Playing around with the PRAW API.
 
  2. Select the script radio button and fill in any name and redirect uri, then create the app.
 
- 3. Rename the config.EDIT file to config, and fill in your client-id, client-secret, user agent (can be whatever), and reddit login credentials.
+ 3. Rename the config.EDIT file to config, and fill in your details from reddit:
+ 
+    - client-id:        personal use script id
+    - client-secret:    secret
+    - user_agent:       anything you want
+    - username and pw:  your reddit login credentials
 
  4. Make sure that the dependencies are installed, then run `python3 script.py`.
 
